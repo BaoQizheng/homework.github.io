@@ -4,14 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BaoQizheng.github.io的子网站"> 
     <title>作业展示</title>
     <!-- 这里可以添加CSS样式来增强页面的视觉效果 -->
 </head>
 
-<body>
+<body onload="setInterval(updateDate, 1000)">
     <!-- Logo -->
-    <div style="display: flex; justify-content: center; align-items: center; height: 100px; background-color: #f0f0f0;">
-        <img src="logo.png" alt="Logo" style="width: 100px; height: 100px;">
+    <div style="display: flex; justify-content: center; align-items: center; height: 50px; background-color: #f0f0f0;">
+        <img src="logo.png" alt="Logo" style="width: 50px; height: 50px;">
     </div>
 
     <!-- 标题 -->
@@ -21,18 +22,23 @@
     <div class="card" style="margin-top: 20px;">
         <p>本周作业：</p>
         <ul>
-            <li>数学：1.《全品》P43-44</li>
-            <li>英语：1.报纸剩余题目</li>
-            <li><del>物理：</del></li>
-            <li>生物学：1.试卷</li>
-            <li>历史：1.《全品·导学案》下一课+三个问题</li>
-            <li>地理：1.《作业本》P10-13 T1-15</li>
+            <li>语文：1.《作业本》（黄的那个 封面上写着“作业本”三个大字的那个）“纪念刘和珍君”全部做完</li>
+            <li>数学：1.试卷</li>
+            <li>英语：1.无（外研杯同学自己准备）</li>
+            <li>生物学：1.《作业本》P31-33（T21有部分是在P34，别忘写！！！）</li>
+            <li>思想政治：1.自主复习</li>
+            <li>历史：1.《作业本》L12T15+L13选择题</li>
+            <li>地理：1.《全品·练习册》“产业转型地区的结构优化——以美国休斯敦为例”</li>
+            <li>通用技术：1.试卷</li>
         </ul>
+        <p id="date"></p>
     </div>
 
     <!-- 版权 -->
-    <div style="text-align: center; margin-top: 20px;"><a href="https://baoqizheng.github.io" target="_blank"
-            style="color: aqua;">回到首页</a></div>
+    <div style="text-align: center; margin-top: 20px;">
+        <a href="https://baoqizheng.github.io" target="_blank" style="color: aqua;">回到首页</a>
+        <a href="https://baoqizheng.github.io/Privacy_Policy.txt" target="_blank" style="color: aqua;">《隐私政策》</a>
+    </div>
 </body>
 <script>
     var _hmt = _hmt || [];
@@ -43,7 +49,16 @@
         s.parentNode.insertBefore(hm, s);
     })();
 </script><!--百度统计-->
-
+<script>  
+    function updateDate() {  
+      var date = new Date();  
+      var day = date.getDate();  
+      var month = date.getMonth() + 1; // JavaScript的月份是从0开始的，所以需要+1  
+      var year = date.getFullYear();  
+      var formattedDate = day + "/" + month + "/" + year;  
+      document.getElementById("date").innerHTML = formattedDate;  
+    }  
+  </script>  
 </html>
 <!-- 样式 -->
 <style>
