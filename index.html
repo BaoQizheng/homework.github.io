@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="BaoQizheng.github.io的子网站"> 
-    <title>作业展示</title>
+    <title>寒假作业</title>
     <!-- 这里可以添加CSS样式来增强页面的视觉效果 -->
 </head>
 
@@ -16,29 +15,38 @@
     </div>
 
     <!-- 标题 -->
-    <h1 style="text-align: center; margin-top: 20px;">每周作业</h1>
+    <h1 style="text-align: center; margin-top: 20px;">寒假作业</h1>
+
+    <div class="card" style="text-align: center;">  
+        距离英语作业上交还有<span id="countdown1"></span><span id="event1">>2024年2月8日</span><br>  
+        距离寒假结束还有<span id="countdown2"></span><span id="event2">>2024年2月19日</span>  
+    </div>  
 
     <!-- 作业内容 -->
     <div class="card" style="margin-top: 20px;">
-        <p>本周作业：</p>
         <ul>
-            <li>语文：1.依照作文题目写一段250字</li>
-            <li>数学：1.《全品》P59-60</li>
-            <li>英语：1.没有作业（带材料）</li>
-            <li>生物学：1.《作业本》P3-4</li>
-            <li>思想政治：1.《课时作业本》P150-151</li>
-            <li>历史：1.《导学案》L14填+选+三问，大题不写</li>
-            <li>地理：1.没有作业</li>
-            <li>通用技术：/nil</li>
-            <li>信息技术：/nil</li>
+            <li>语文：1.试卷4（3+1）张</li>
+            <li>数学：1.试卷8（3+5）张</li>
+            <li>英语：1.试卷4（3+1）张[2月8日之前上交]<br>2.其他作业详见通知</li>
+            <li>生物学：1.试卷3（2+1）张</li>
+            <li>思想政治：1.试卷4（2+2）张[P2 T25，P3 T29（2） P4 T33，P8 T35、36，P10判断题100道，P12  T4 ，P13 T45、6、7、8，P14 10、11，P15 T13、14、16，P16 T18不写]</li>
+            <li>历史：1.试卷3（2+1）张</li>
+            <li>地理：1.试卷4（3+1）张</li>
+            <li>通用技术：1.试卷3（2+1）张</li>
+            <li>信息技术：1.试卷3（2+1）张</li>
+            <li>音乐：1.欣赏一首交响乐（详见《寒假作业》）<br>2.拍摄一张观看交响乐的照片，并发表音乐评论（不少于50字，上交给课代表）</li>
+            <li>体育：1.打卡不少于8次</li>
+            <li>团委活动：1.亲子共做年夜饭<br>2.地名文化我弘扬</li>
+            <li>其他：1.研究性学习课程（详见《杭州第四中学江东学校研究性课程实施方案》）</li>
         </ul>
+        <p style="font-size: smaller;">温馨提醒：作业内容和描述发生变更后会在此更新。如果作业内容存在问题，你也可以向管理员反应。</p>
         <p style="font-size: smaller;">/Synchronized from powerpoint.</p>
     </div>
 
     <div class="card" style="margin-top: 20px;">
         <p>附件：</p>
         <ul>
-            <li><a href="https://kdocs.cn/l/crBmD8KksyCy" target="_blank">期末考作文.pptx</a></li>
+            <li><a href="" target="_blank">empty.keep</a></li>
         </ul>
     </div>
     <p id="date"></p>
@@ -78,3 +86,27 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 </style>
+<style>  
+    .countdown-container {  
+        text-align: center;  
+        font-size: 24px;  
+        margin-top: 100px;  
+    }  
+    .countdown-container span {  
+        margin-right: 10px;  
+    }  
+</style>  
+<script>  
+    function countdown(date, eventName) {  
+        var countdownDate = new Date(date).getTime();  
+        var today = new Date().getTime();  
+        var distance = countdownDate - today;  
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));  
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));  
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));  
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);  
+        document.getElementById('countdown' + eventName).innerHTML = days + '天';  
+    }  
+    countdown('2024-02-08', '1');  
+    countdown('2024-02-19', '2');  
+</script>  
